@@ -7,10 +7,10 @@ services:
       - "8000:80"
     networks:
       - jasper
-      # - route  # Needed to communicate with the root nginx, but exclude other containers to avoid namespace conflicts
+      - route  # Needed to communicate with the root nginx, but exclude other containers to avoid namespace conflicts
 
 networks:
-  # route:
-  #   external: true
+  route:
+    external: true
   jasper:
     external: true
