@@ -1,0 +1,16 @@
+services:
+  jasper-nginx:
+    build: .
+    container_name: jasper-nginx
+    restart: always
+    ports:
+      - "8000:80"
+    networks:
+      - jasper
+      # - route  # Needed to communicate with the root nginx, but exclude other containers to avoid namespace conflicts
+
+networks:
+  # route:
+  #   external: true
+  jasper:
+    external: true

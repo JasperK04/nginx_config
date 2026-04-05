@@ -1,0 +1,12 @@
+name: jasper
+
+include:
+  - nginx/compose.yml
+  - website/compose.yml
+  - website/static/projects/recipes/compose.yml
+  - website/static/projects/KTP_project/compose.yml
+  - website/static/projects/marketplace/compose.yml
+
+networks:
+  jasper:
+    external: true
