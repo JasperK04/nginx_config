@@ -4,8 +4,8 @@ services:
     container_name: jasper-nginx
     restart: always
     volumes:
-      - ../website/templates/404.html:/usr/share/nginx/html/404.html
-      - ../website/static/css:/usr/share/nginx/html/static/css
+      - ../website/templates/:/usr/share/nginx/html/templates
+      - ../website/static:/usr/share/nginx/html/static
     ports:
       - "8000:80"
     networks:
